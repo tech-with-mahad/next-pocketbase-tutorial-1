@@ -105,3 +105,76 @@ a {
     color-scheme: dark;
   }
 }
+
+.page-wrapper {
+  min-width: 100dvw;
+  min-height: 100dvh;
+  overflow: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+.page-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(15rem, 90dvw);
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+}
+
+.page-wrapper form > div {
+  width: 100%;
+  margin-bottom: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  max-width: min(15rem, 90vw);
+  margin-bottom: 0.25rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  max-width: min(15rem, 90vw);
+  margin: 0.75rem 0;
+}
+
+.btn-danger {
+  background-color: red;
+  color: white;
+  border: none;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid red;
+  border-radius: 0.15rem;
+  width: 100%;
+  text-align: center;
+}
