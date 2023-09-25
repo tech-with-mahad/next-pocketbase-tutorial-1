@@ -3,7 +3,6 @@ import db from "./db";
 
 export async function middleware(request: NextRequest) {
     console.log(`[middleware] ${request.method} ${request.url}`);
-    // TODO: get is logged in from PocketBase
     const isLoggedIn = await db.isAuthenticated(request.cookies as any);
     if (request.nextUrl.pathname && request.nextUrl.pathname.startsWith("/auth")) {
         if (isLoggedIn) {
